@@ -315,15 +315,84 @@
   footer .ft-contacts a{text-decoration:none;color:var(--ink);}
   footer .ft-contacts a:hover{color:var(--accent-strong);}
 
+  /* ---------- Credit ---------- */
+  .credit{
+    margin-top:28px;
+    text-align:center;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.03em;
+    color:var(--ink-faint);
+  }
+
+  /* ---------- Scroll progress ---------- */
+  .progress{
+    position:fixed;
+    top:0;left:0;
+    height:2.5px;
+    width:0%;
+    background:linear-gradient(90deg,var(--accent),var(--accent-strong));
+    z-index:60;
+    transition:width .12s linear;
+  }
+
+  /* ---------- Micro-interactions ---------- */
+  html{scroll-behavior:smooth;}
+  .chip{transition:border-color .2s ease, transform .2s ease, background .2s ease;}
+  .chip:hover{border-color:var(--accent);transform:translateY(-1px);}
+  .exp-item{transition:padding-left .3s ease;}
+  .exp-item:hover{padding-left:6px;}
+  .tag{transition:background .2s ease,color .2s ease;}
+  .exp-item:hover .tag{background:var(--surface);}
+
+  h2.section-title{position:relative;padding-bottom:15px;}
+  h2.section-title::after{
+    content:"";
+    position:absolute;
+    left:0;bottom:0;
+    height:2px;width:36px;
+    background:var(--accent);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .7s cubic-bezier(.16,.8,.24,1) .15s;
+  }
+  .reveal.is-visible h2.section-title::after,
+  h2.section-title.reveal.is-visible::after{transform:scaleX(1);}
+
+  /* ---------- Reveal on scroll + hero entrance ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{
+      opacity:0;
+      transform:translateY(26px);
+      transition:opacity .8s cubic-bezier(.16,.8,.24,1), transform .8s cubic-bezier(.16,.8,.24,1);
+    }
+    .reveal.is-visible{opacity:1;transform:none;}
+    .gallery-item.reveal{transition-delay:var(--stagger,0s);}
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(16px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+    .hero > *{animation:fadeUp .75s cubic-bezier(.16,.8,.24,1) both;}
+    .hero .eyebrow{animation-delay:.02s;}
+    .hero .name{animation-delay:.1s;}
+    .hero .role{animation-delay:.2s;}
+    .hero .tagline{animation-delay:.3s;}
+    .hero .contacts{animation-delay:.4s;}
+  }
+
   @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
     .gallery-item img, .figma-btn{transition:none;}
   }
 </style>
 
+<div class="progress" aria-hidden="true"></div>
+
 <div class="wrap">
 
   <header class="hero">
-    <p class="eyebrow">Портфолио · графический и UI/UX-дизайн</p>
+    <p class="eyebrow">Портфолио</p>
     <h1 class="name">Морев Владислав</h1>
     <p class="role">Дизайнер — айдентика, дизайн-системы, интерфейсы</p>
     <p class="tagline">Студент 4 курса, дизайном занимаюсь параллельно с учёбой: от фирменных стилей и постеров до UI-макетов в Figma. Собираю визуальный язык проекта с нуля и довожу его до готовых материалов.</p>
@@ -343,7 +412,7 @@
     </div>
   </header>
 
-  <section class="experience">
+  <section class="experience reveal">
     <h2 class="section-title">Опыт</h2>
 
     <div class="exp-item">
@@ -360,7 +429,7 @@
     </div>
   </section>
 
-  <section class="uiux">
+  <section class="uiux reveal">
     <h2 class="section-title">UI / UX</h2>
     <div class="feature-card">
       <div class="feature-top">
@@ -378,35 +447,35 @@
   </section>
 
   <section class="graphic">
-    <h2 class="section-title">Графика и айдентика</h2>
+    <h2 class="section-title reveal">Графика и айдентика</h2>
     <div class="gallery">
 
-      <div class="gallery-item">
+      <div class="gallery-item reveal" style="--stagger:.03s">
         <img src="img/a5.jpg" alt="Постер «Буквы много. Но настоящая — одна. Не промахнись.» — Братство Академистов" loading="lazy">
         <div class="cap">Братство Академистов<br>ключевой постер</div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item reveal" style="--stagger:.09s">
         <img src="img/a3.jpg" alt="Постер «День Крещения Руси»" loading="lazy">
         <div class="cap">День Крещения Руси<br>тематический постер</div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item reveal" style="--stagger:.15s">
         <img src="img/a4.jpg" alt="Постер «С днём рождения, Ермолов»" loading="lazy">
         <div class="cap">С днём рождения, Ермолов<br>портретный постер</div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item reveal" style="--stagger:.03s">
         <img src="img/a1.jpg" alt="Постер к лекции «Исторические основания христианской веры»" loading="lazy">
         <div class="cap">Исторические основания<br>анонс лекции</div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item reveal" style="--stagger:.09s">
         <img src="img/a2.jpg" alt="Постер «Русский орнамент»" loading="lazy">
         <div class="cap">Русский орнамент<br>элемент дизайн-кода</div>
       </div>
 
-      <div class="gallery-item">
+      <div class="gallery-item reveal" style="--stagger:.15s">
         <img src="img/a6.jpg" alt="Постер «День без фейков»" loading="lazy">
         <div class="cap">День без фейков<br>событийный постер</div>
       </div>
@@ -414,7 +483,7 @@
     </div>
   </section>
 
-  <section class="skills">
+  <section class="skills reveal">
     <h2 class="section-title">Навыки</h2>
     <div class="skills-grid">
       <div class="skill-group">
@@ -435,7 +504,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer class="reveal">
     <div class="ft-contacts">
       <a href="mailto:moreffvladis387@gmail.com">moreffvladis387@gmail.com</a>
       <span>+7 900 144-08-40</span>
@@ -443,6 +512,37 @@
     </div>
   </footer>
 
+  <p class="credit">Дизайн и сайт — совместная работа UI/UX-дизайна и Claude Code</p>
+
 </div>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  var bar = document.querySelector('.progress');
+  function updateProgress(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+})();
+</script>
 
 </body></html>
