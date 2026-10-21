@@ -1,801 +1,337 @@
-<!doctype html><html lang="ru"><head>
-<meta charset="utf8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Морев Владислав — портфолио дизайнера</title>
-<meta name="description" content="Портфолио Владислава Морева — дизайнера: айдентика, дизайн-системы, UI/UX интерфейсы в Figma.">
-<meta property="og:title" content="Морев Владислав — дизайнер">
-<meta property="og:description" content="Айдентика, дизайн-системы, UI/UX интерфейсы. Портфолио и работы в Figma.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23201C15'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23E3AC4F' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
-<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:76px}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Морев Владислав — дизайнер</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
+:root{
+  --ink:#110e0c;
+  --ink-2:#1a1512;
+  --ink-3:#241d18;
+  --paper:#ece3d2;
+  --paper-dim:#a99d8a;
+  --red:#b3261e;
+  --red-deep:#7d1a14;
+  --gold:#c9a24a;
+  --gold-dim:#8a7036;
+  --line:rgba(201,162,74,.22);
+  --display:"Oswald",Impact,sans-serif;
+  --text:"Manrope",system-ui,sans-serif;
+  --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font:16px/1.6 var(--text);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.16;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.eyebrow{font:500 12px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 
-  :root{
-    --bg:#F6F1E6;
-    --surface:#FFFFFF;
-    --surface-2:#EFE7D6;
-    --ink:#201C15;
-    --ink-soft:#655D4C;
-    --ink-faint:#8C8270;
-    --accent:#A9711E;
-    --accent-strong:#7C4E12;
-    --line:#DED0B3;
-    --shadow: 0 1px 2px rgba(32,28,21,.04), 0 10px 28px -14px rgba(32,28,21,.28);
-    --shadow-lg: 0 2px 4px rgba(32,28,21,.05), 0 24px 48px -20px rgba(32,28,21,.32);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#171310;
-      --surface:#211C16;
-      --surface-2:#2A241C;
-      --ink:#F1E9D8;
-      --ink-soft:#BCAF95;
-      --ink-faint:#8B8065;
-      --accent:#E3AC4F;
-      --accent-strong:#F3C878;
-      --line:#3A3225;
-      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 34px -16px rgba(0,0,0,.6);
-      --shadow-lg: 0 2px 6px rgba(0,0,0,.35), 0 30px 60px -22px rgba(0,0,0,.7);
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#171310;
-    --surface:#211C16;
-    --surface-2:#2A241C;
-    --ink:#F1E9D8;
-    --ink-soft:#BCAF95;
-    --ink-faint:#8B8065;
-    --accent:#E3AC4F;
-    --accent-strong:#F3C878;
-    --line:#3A3225;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 34px -16px rgba(0,0,0,.6);
-    --shadow-lg: 0 2px 6px rgba(0,0,0,.35), 0 30px 60px -22px rgba(0,0,0,.7);
-  }
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(17,14,12,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;font:500 15px/1 var(--display);letter-spacing:.12em;text-transform:uppercase}
+.logo i{font-style:normal;width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold);font-size:18px}
+.nav ul{display:flex;gap:32px;list-style:none;font:400 13px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--paper-dim)}
+.nav ul a:hover{color:var(--gold)}
+.status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--paper-dim)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(179,38,30,.25)}
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Manrope',system-ui,sans-serif;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-    position:relative;
-    overflow-x:hidden;
-  }
-  body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:0;
-    pointer-events:none;
-    background:
-      radial-gradient(1100px 560px at 12% -8%, rgba(169,113,30,.16), transparent 60%),
-      radial-gradient(900px 480px at 104% 4%, rgba(124,78,18,.12), transparent 55%);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) body::before{
-      background:
-        radial-gradient(1100px 560px at 12% -8%, rgba(227,172,79,.10), transparent 60%),
-        radial-gradient(900px 480px at 104% 4%, rgba(243,200,120,.08), transparent 55%);
-    }
-  }
-  :root[data-theme="dark"] body::before{
-    background:
-      radial-gradient(1100px 560px at 12% -8%, rgba(227,172,79,.10), transparent 60%),
-      radial-gradient(900px 480px at 104% 4%, rgba(243,200,120,.08), transparent 55%);
-  }
-  a{color:inherit;}
-  img{display:block;}
-  .wrap{
-    position:relative;
-    z-index:1;
-    max-width:860px;
-    margin:0 auto;
-    padding-inline:20px;
-    padding-block:36px 80px;
-  }
-  .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--accent);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin:0 0 18px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:26px;height:1px;
-    background:var(--accent);
-    display:inline-block;
-  }
+/* hero */
+.hero{position:relative;padding:72px 0 0;overflow:hidden;
+  background:radial-gradient(70% 60% at 85% 30%,rgba(179,38,30,.22),transparent 70%),
+             radial-gradient(50% 50% at 10% 90%,rgba(201,162,74,.08),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:center;padding-bottom:56px}
+.hero h1{font:600 clamp(60px,8.6vw,128px)/.86 var(--display);text-transform:uppercase;letter-spacing:-.01em;margin:22px 0 28px}
+.hero h1 span{display:block;color:var(--gold)}
+.hero .lead{max-width:520px;font-size:18px;color:var(--paper-dim)}
+.hero .lead b{color:var(--paper);font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;font:500 14px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--gold);transition:.2s}
+.btn.primary{background:var(--red);border-color:var(--red);color:var(--paper)}
+.btn.primary:hover{background:var(--red-deep);border-color:var(--red-deep)}
+.btn:not(.primary):hover{background:var(--gold);color:var(--ink)}
+.fan{position:relative;height:560px}
+.fan img{position:absolute;width:62%;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.55)}
+.fan img:nth-child(1){left:0;top:70px;transform:rotate(-7deg)}
+.fan img:nth-child(2){right:0;top:20px;transform:rotate(6deg)}
+.fan img:nth-child(3){left:19%;top:0;z-index:2}
+.stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.stats div{padding:26px 0 30px;border-right:1px solid var(--line);padding-left:24px}
+.stats div:first-child{padding-left:0}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font:500 44px/1 var(--display);color:var(--gold)}
+.stats span{font-size:13px;color:var(--paper-dim)}
 
-  /* ---------- Nav ---------- */
-  .site-nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    backdrop-filter:blur(14px) saturate(140%);
-    -webkit-backdrop-filter:blur(14px) saturate(140%);
-    background:color-mix(in srgb, var(--bg) 78%, transparent);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-inner{
-    max-width:860px;
-    margin:0 auto;
-    padding:14px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-  }
-  .brand{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:16.5px;
-    text-decoration:none;
-    display:flex;
-    align-items:center;
-    gap:9px;
-    white-space:nowrap;
-    flex:none;
-  }
-  .brand-mark{
-    width:26px;height:26px;
-    border-radius:8px;
-    background:var(--ink);
-    color:var(--bg);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Fraunces',serif;
-    font-size:13px;
-    flex:none;
-  }
-  .nav-links{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    overflow-x:auto;
-    scrollbar-width:none;
-  }
-  .nav-links::-webkit-scrollbar{display:none;}
-  .nav-links a{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    color:var(--ink-soft);
-    text-decoration:none;
-    padding:7px 11px;
-    border-radius:8px;
-    white-space:nowrap;
-    transition:color .2s ease, background .2s ease;
-  }
-  .nav-links a:hover{color:var(--ink);background:var(--surface-2);}
-  .theme-toggle{
-    width:34px;height:34px;
-    flex:none;
-    border-radius:9px;
-    border:1px solid var(--line);
-    background:var(--surface);
-    color:var(--ink-soft);
-    display:flex;align-items:center;justify-content:center;
-    cursor:pointer;
-    transition:color .2s ease, border-color .2s ease, transform .2s ease;
-  }
-  .theme-toggle:hover{color:var(--accent-strong);border-color:var(--accent);transform:translateY(-1px);}
-  .theme-toggle svg{width:16px;height:16px;}
-  @media (max-width:440px){
-    .nav-inner{padding:12px 14px;gap:8px;}
-    .brand-name{display:none;}
-    .nav-links{gap:1px;}
-    .nav-links a{padding:6px 8px;font-size:11.5px;}
-  }
-  .theme-toggle .icon-moon{display:none;}
-  :root[data-theme="dark"] .theme-toggle .icon-sun{display:none;}
-  :root[data-theme="dark"] .theme-toggle .icon-moon{display:block;}
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .theme-toggle .icon-sun{display:none;}
-    :root:not([data-theme="light"]) .theme-toggle .icon-moon{display:block;}
-  }
+/* ornament band */
+.ornament{height:34px;background-color:var(--red-deep);
+  background-image:
+    linear-gradient(45deg,transparent 42%,var(--gold) 42% 50%,transparent 50%),
+    linear-gradient(-45deg,transparent 42%,var(--gold) 42% 50%,transparent 50%),
+    linear-gradient(45deg,var(--red) 25%,transparent 25% 75%,var(--red) 75%),
+    linear-gradient(-45deg,var(--red) 25%,transparent 25% 75%,var(--red) 75%);
+  background-size:34px 34px;border-block:3px solid var(--ink);outline:1px solid var(--gold-dim)}
 
-  /* ---------- Hero ---------- */
-  header.hero{margin-bottom:64px;padding-top:20px;}
-  .status-pill{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    letter-spacing:.04em;
-    color:var(--ink-soft);
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:100px;
-    padding:6px 12px 6px 9px;
-    margin:0 0 22px;
-  }
-  .status-dot{
-    width:7px;height:7px;border-radius:50%;
-    background:#5EA26B;
-    box-shadow:0 0 0 3px rgba(94,162,107,.18);
-    flex:none;
-  }
-  h1.name{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:clamp(40px,7.4vw,68px);
-    line-height:1.02;
-    letter-spacing:-.01em;
-    margin:0 0 10px;
-    text-wrap:balance;
-  }
-  .role{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-weight:500;
-    font-size:clamp(18px,2.6vw,23px);
-    color:var(--ink-soft);
-    margin:0 0 28px;
-  }
-  .tagline{
-    max-width:58ch;
-    font-size:16.5px;
-    color:var(--ink-soft);
-    margin:0 0 30px;
-  }
-  .contacts{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-  }
-  .chip{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:13px;
-    color:var(--ink);
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:100px;
-    padding:8px 14px;
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    text-decoration:none;
-  }
-  .chip svg{width:13px;height:13px;flex:none;opacity:.75;}
+/* cases */
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:110px 0 56px}
+.section-head h2{font:600 clamp(44px,6vw,84px)/.9 var(--display);text-transform:uppercase}
+.section-head p{max-width:360px;color:var(--paper-dim);font-size:15px}
+.case{position:relative;border-top:1px solid var(--line);padding:56px 0 96px}
+.case .num{position:absolute;top:10px;right:-6px;font:600 clamp(150px,22vw,300px)/.8 var(--display);color:transparent;-webkit-text-stroke:1.5px var(--gold-dim);opacity:.55;pointer-events:none;user-select:none}
+.case-head{position:relative;display:grid;grid-template-columns:120px 1fr;gap:24px;max-width:780px;margin-bottom:44px}
+.case-head .idx{font:500 15px/1 var(--display);color:var(--red);letter-spacing:.1em;padding-top:12px;border-top:2px solid var(--red)}
+.case-head h3{font:600 clamp(34px,4.2vw,58px)/.95 var(--display);text-transform:uppercase;margin-bottom:16px}
+.case-head p{color:var(--paper-dim);max-width:560px}
+.case-link{display:inline-flex;gap:8px;margin-top:22px;font:500 13px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--paper);border-bottom:1px solid var(--red);padding-bottom:6px}
+.case-link:hover{color:var(--gold)}
 
-  /* ---------- Sections ---------- */
-  section{margin-bottom:68px;scroll-margin-top:76px;}
-  section:last-of-type{margin-bottom:0;}
-  .section-head{margin-bottom:26px;}
-  .section-kicker{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--ink-faint);
-    margin:0 0 8px;
-  }
-  h2.section-title{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:clamp(24px,3.4vw,30px);
-    margin:0;
-    letter-spacing:-.005em;
-    position:relative;
-    padding-bottom:15px;
-  }
-  h2.section-title::after{
-    content:"";
-    position:absolute;
-    left:0;bottom:0;
-    height:2px;width:36px;
-    background:var(--accent);
-    transform:scaleX(0);
-    transform-origin:left;
-    transition:transform .7s cubic-bezier(.16,.8,.24,1) .15s;
-  }
-  .reveal.is-visible h2.section-title::after,
-  h2.section-title.reveal.is-visible::after{transform:scaleX(1);}
-  .section-note{
-    max-width:60ch;
-    color:var(--ink-soft);
-    font-size:15.5px;
-    margin:10px 0 0;
-  }
+.posters{position:relative;display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.posters figure{position:relative;overflow:hidden;background:var(--ink-2);border:1px solid var(--line)}
+.posters figure:first-child{grid-row:span 2}
+.posters img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.posters figure:hover img{transform:scale(1.03)}
+.posters figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(17,14,12,.92));font:500 14px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase}
+.posters figcaption small{display:block;font:400 12px/1.4 var(--text);letter-spacing:0;text-transform:none;color:var(--paper-dim);margin-top:4px}
 
-  /* ---------- Experience ---------- */
-  .exp-item{
-    border-top:1px solid var(--line);
-    padding-block:26px;
-    display:grid;
-    grid-template-columns:180px 1fr;
-    gap:20px;
-    transition:padding-left .3s ease;
-  }
-  .exp-item:hover{padding-left:6px;}
-  .exp-item:last-child{border-bottom:1px solid var(--line);}
-  .exp-period{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    color:var(--ink-faint);
-    letter-spacing:.02em;
-    padding-top:3px;
-  }
-  .exp-role{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:19px;
-    margin:0 0 4px;
-  }
-  .exp-org{color:var(--accent-strong);font-weight:600;}
-  .exp-desc{color:var(--ink-soft);font-size:15px;margin:0;}
-  .exp-tags{
-    display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;
-  }
-  .tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    background:var(--surface-2);
-    border-radius:6px;
-    padding:5px 9px;
-    transition:background .2s ease,color .2s ease;
-  }
-  .exp-item:hover .tag{background:var(--surface);}
-  @media (max-width:560px){
-    .exp-item{grid-template-columns:1fr;gap:6px;}
-  }
+.screen{position:relative;background:var(--ink-2);border:1px solid var(--line)}
+.screen .bar{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.screen .bar i{width:9px;height:9px;border-radius:50%;background:var(--ink-3)}
+.screen img{width:100%}
+.screen.scroll .view{aspect-ratio:16/10;overflow:hidden}
+.screen.scroll img{height:100%;object-fit:cover;object-position:50% 0;transition:object-position 7s ease-in-out}
+.screen.scroll:hover img{object-position:50% 100%}
+.screen .hint{position:absolute;right:14px;top:8px;font:400 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--paper-dim)}
+.case.split .body{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,1fr);gap:16px;align-items:start}
+.case.split .stack{display:grid;gap:16px}
+.case.pair .body{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 
-  /* ---------- UI/UX project cards ---------- */
-  .feature-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(252px,1fr));
-    gap:18px;
-  }
-  .feature-card{
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:18px;
-    padding:26px;
-    box-shadow:var(--shadow);
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    height:100%;
-    transition:transform .3s cubic-bezier(.16,.8,.24,1), box-shadow .3s cubic-bezier(.16,.8,.24,1), border-color .3s ease;
-  }
-  .feature-card:hover{
-    transform:translateY(-3px);
-    box-shadow:var(--shadow-lg);
-    border-color:var(--accent);
-  }
-  .card-icon{
-    width:38px;height:38px;
-    border-radius:10px;
-    background:var(--surface-2);
-    color:var(--accent-strong);
-    display:flex;align-items:center;justify-content:center;
-    flex:none;
-  }
-  .card-icon svg{width:19px;height:19px;}
-  .feature-title{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:20px;
-    margin:0 0 5px;
-    line-height:1.2;
-  }
-  .feature-sub{
-    color:var(--ink-faint);
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    letter-spacing:.03em;
-  }
-  .feature-desc{color:var(--ink-soft);font-size:14.5px;flex:1;margin:0;}
-  .figma-btn{
-    align-self:flex-start;
-    margin-top:auto;
-    display:inline-flex;
-    align-items:center;
-    gap:9px;
-    background:var(--ink);
-    color:var(--bg);
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    font-weight:500;
-    text-decoration:none;
-    padding:11px 16px;
-    border-radius:10px;
-    transition:transform .15s ease, opacity .15s ease;
-  }
-  .figma-btn:hover{transform:translateY(-1px);opacity:.9;}
-  .figma-btn svg{width:14px;height:14px;flex:none;}
+/* about */
+.about{background:var(--ink-2);border-block:1px solid var(--line);padding:100px 0}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px}
+.about h2{font:600 54px/.9 var(--display);text-transform:uppercase}
+.about h4{font:500 13px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.job b{display:block;font:500 22px/1.1 var(--display);text-transform:uppercase;margin:4px 0 10px}
+.job small{color:var(--red);font:500 13px/1 var(--display);letter-spacing:.1em}
+.job p,.about li{color:var(--paper-dim);font-size:15px}
+.about ul{list-style:none}
+.about li{padding:12px 0;border-bottom:1px solid var(--line)}
+.about li b{color:var(--paper);font-weight:500}
 
-  /* ---------- Gallery ---------- */
-  .gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-  }
-  .gallery-item{
-    position:relative;
-    border-radius:12px;
-    overflow:hidden;
-    border:1px solid var(--line);
-    background:var(--surface-2);
-    aspect-ratio:3/4;
-    box-shadow:var(--shadow);
-  }
-  .gallery-item img{
-    width:100%;height:100%;object-fit:cover;
-    transition:transform .35s ease;
-  }
-  .gallery-item:hover img{transform:scale(1.045);}
-  .cap{
-    position:absolute;left:0;right:0;bottom:0;
-    padding:10px 10px 9px;
-    background:linear-gradient(to top, rgba(10,8,4,.82), rgba(10,8,4,0));
-    color:#F3ECDC;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10.8px;
-    line-height:1.35;
-    letter-spacing:.01em;
-  }
-  @media (max-width:640px){
-    .gallery{grid-template-columns:repeat(2,1fr);}
-  }
-  @media (max-width:420px){
-    .gallery{grid-template-columns:1fr 1fr;gap:10px;}
-    .cap{font-size:10.2px;}
-  }
+/* contact */
+.contact{position:relative;padding:130px 0 120px;text-align:center;overflow:hidden;
+  background:radial-gradient(60% 80% at 50% 100%,rgba(179,38,30,.35),transparent 70%)}
+.contact h2{font:600 clamp(56px,11vw,170px)/.85 var(--display);text-transform:uppercase}
+.contact h2 span{color:var(--gold)}
+.contact p{color:var(--paper-dim);margin:28px auto 40px;max-width:460px}
+.contact .mail{display:inline-block;font:500 clamp(22px,3vw,36px)/1 var(--display);letter-spacing:.04em;border-bottom:2px solid var(--red);padding-bottom:8px}
+.contact .mail:hover{color:var(--gold)}
+.contact .alt{display:flex;justify-content:center;gap:28px;margin-top:30px;font:400 14px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--paper-dim)}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--paper-dim)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
-  /* ---------- Skills ---------- */
-  .skills-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:26px 32px;
-  }
-  .skill-group h3{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--ink-faint);
-    margin:0 0 10px;
-    font-weight:500;
-  }
-  .skill-group ul{margin:0;padding:0;list-style:none;}
-  .skill-group li{
-    font-size:15px;
-    padding:7px 0;
-    border-top:1px solid var(--line);
-  }
-  .skill-group li:first-of-type{border-top:none;}
-  @media (max-width:560px){
-    .skills-grid{grid-template-columns:1fr;}
-  }
-
-  /* ---------- Footer ---------- */
-  footer{
-    border-top:1px solid var(--line);
-    padding-top:32px;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    flex-wrap:wrap;
-    gap:18px;
-  }
-  footer .ft-title{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-size:19px;
-    color:var(--ink-soft);
-    max-width:38ch;
-    margin:0;
-  }
-  footer .ft-contacts{
-    display:flex;flex-direction:column;gap:6px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:13px;
-    text-align:right;
-  }
-  footer .ft-contacts a{text-decoration:none;color:var(--ink);}
-  footer .ft-contacts a:hover{color:var(--accent-strong);}
-  @media (max-width:560px){
-    footer{justify-content:flex-start;}
-    footer .ft-contacts{text-align:left;}
-  }
-
-  /* ---------- Credit ---------- */
-  .credit{
-    margin-top:28px;
-    text-align:center;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    letter-spacing:.03em;
-    color:var(--ink-faint);
-  }
-
-  /* ---------- Scroll progress ---------- */
-  .progress{
-    position:fixed;
-    top:0;left:0;
-    height:2.5px;
-    width:0%;
-    background:linear-gradient(90deg,var(--accent),var(--accent-strong));
-    z-index:60;
-    transition:width .12s linear;
-  }
-
-  /* ---------- Micro-interactions ---------- */
-  .chip{transition:border-color .2s ease, transform .2s ease, background .2s ease;}
-  .chip:hover{border-color:var(--accent);transform:translateY(-1px);}
-
-  /* ---------- Reveal on scroll + hero entrance ---------- */
-  @media (prefers-reduced-motion: no-preference){
-    .reveal{
-      opacity:0;
-      transform:translateY(26px);
-      transition:opacity .8s cubic-bezier(.16,.8,.24,1), transform .8s cubic-bezier(.16,.8,.24,1);
-    }
-    .reveal.is-visible{opacity:1;transform:none;}
-    .gallery-item.reveal, .feature-card.reveal{transition-delay:var(--stagger,0s);}
-
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(16px);}
-      to{opacity:1;transform:translateY(0);}
-    }
-    .hero > *{animation:fadeUp .75s cubic-bezier(.16,.8,.24,1) both;}
-    .hero .status-pill{animation-delay:0s;}
-    .hero .name{animation-delay:.08s;}
-    .hero .role{animation-delay:.16s;}
-    .hero .tagline{animation-delay:.24s;}
-    .hero .contacts{animation-delay:.32s;}
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    .gallery-item img, .figma-btn, .feature-card{transition:none;}
-  }
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero .wrap{grid-template-columns:1fr;min-height:0}
+  .hero .wrap{padding-bottom:40px}
+  .fan{height:420px;max-width:440px;width:100%;margin:0 auto}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats div:nth-child(2){border-right:0}
+  .stats div:nth-child(3){padding-left:0}
+  .stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .section-head{flex-direction:column;align-items:start;padding:80px 0 40px}
+  .case-head{grid-template-columns:1fr;gap:14px}
+  .case-head .idx{width:80px}
+  .posters{grid-template-columns:1fr 1fr}
+  .posters figure:first-child{grid-column:span 2;grid-row:auto}
+  .case.split .body,.case.pair .body{grid-template-columns:1fr}
+  .screen .hint{display:none}
+  .about .wrap{grid-template-columns:1fr;gap:44px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .status{display:none}
+  .hero{padding-top:44px}
+  .hero .lead{font-size:16px}
+  .cta-row{margin-top:28px}
+  .btn{flex:1;justify-content:center;padding:0 16px}
+  .fan{height:380px}
+  .fan img{width:54%}
+  .fan img:nth-child(3){left:23%}
+  .stats b{font-size:34px}
+  .stats div{padding-left:16px}
+  .case{padding:44px 0 72px}
+  .posters{gap:10px}
+  .contact .alt{flex-direction:column;gap:14px}
+}
 </style>
-</head><body>
+</head>
+<body>
 
-<div class="progress" aria-hidden="true"></div>
-
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a class="brand" href="#top"><span class="brand-mark">М</span><span class="brand-name">Морев Владислав</span></a>
-    <div class="nav-links">
-      <a href="#experience">Опыт</a>
-      <a href="#work">Работы</a>
-      <a href="#skills">Навыки</a>
-      <a href="#contact">Контакты</a>
-    </div>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><i>М</i>Морев</a>
+    <ul>
+      <li><a href="#work">Работы</a></li>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#contact">Связь</a></li>
+    </ul>
+    <span class="status">Открыт для проектов</span>
   </div>
 </nav>
 
-<div class="wrap" id="top">
-
-  <header class="hero">
-    <p class="status-pill"><span class="status-dot"></span>Открыт для проектов</p>
-    <p class="eyebrow">Портфолио</p>
-    <h1 class="name">Морев Владислав</h1>
-    <p class="role">Дизайнер — айдентика, дизайн-системы, интерфейсы</p>
-    <p class="tagline">Студент 4 курса, дизайном занимаюсь параллельно с учёбой: от фирменных стилей и постеров до UI-макетов в Figma. Собираю визуальный язык проекта с нуля и довожу его до готовых материалов.</p>
-    <div class="contacts">
-      <a class="chip" href="mailto:moreffvladis387@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-        moreffvladis387@gmail.com
-      </a>
-      <span class="chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        +7 900 144-08-40
-      </span>
-      <span class="chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Москва
-      </span>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Портфолио · Москва · 2026</p>
+      <h1>Морев<span>Владислав</span></h1>
+      <p class="lead"><b>Дизайнер — айдентика, постеры, интерфейсы.</b> Собираю визуальный язык проекта с нуля и довожу его до готовых материалов: от фирменного стиля до макета в Figma.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#work">Смотреть работы →</a>
+        <a class="btn" href="#contact">Написать</a>
+      </div>
     </div>
-  </header>
+    <div class="fan" aria-hidden="true">
+      <img src="img/a3.jpg" alt="">
+      <img src="img/a4.jpg" alt="">
+      <img src="img/a1.jpg" alt="">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div><b>04</b><span>кейса в портфолио</span></div>
+      <div><b>06</b><span>постеров и анонсов</span></div>
+      <div><b>1,5</b><span>года в «Царьграде»</span></div>
+      <div><b>Figma</b><span>основной инструмент</span></div>
+    </div>
+  </div>
+</header>
 
-  <section class="experience reveal" id="experience">
+<div class="ornament" role="presentation"></div>
+
+<main id="work">
+  <div class="wrap">
     <div class="section-head">
-      <h2 class="section-title">Опыт</h2>
+      <h2>Избранные<br>работы</h2>
+      <p>Постеры и айдентика, лендинги и презентации — от идеи до готового макета.</p>
     </div>
 
-    <div class="exp-item">
-      <div class="exp-period">апр 2025 — сент 2026</div>
-      <div>
-        <p class="exp-role">Дизайнер · <span class="exp-org">Царьград</span></p>
-        <p class="exp-desc">Дизайн презентаций и постеров, участие в формировании единой дизайн-системы — типографика, цвет, композиция — для последовательного оформления материалов.</p>
-        <div class="exp-tags">
-          <span class="tag">презентации</span>
-          <span class="tag">постеры</span>
-          <span class="tag">дизайн-система</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="uiux reveal" id="work">
-    <div class="section-head">
-      <p class="section-kicker">Избранное</p>
-      <h2 class="section-title">UI / UX</h2>
-      <p class="section-note">Самостоятельные и тестовые проекты в Figma — от структуры и пользовательского пути до детального макета.</p>
-    </div>
-    <div class="feature-grid">
-
-      <div class="feature-card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l3 5-10 13L2 8z"/><path d="M2 8h20M9 3l1 5-3 13M15 3l-1 5 3 13"/></svg>
-        </div>
+    <article class="case">
+      <span class="num">01</span>
+      <div class="case-head">
+        <span class="idx">01 / 04</span>
         <div>
-          <p class="feature-title">«Грань» — сайт ювелирного магазина</p>
-          <p class="feature-sub">FIGMA · ЛЕНДИНГ · АВГУСТ 2026</p>
+          <h3>Царьград — постеры</h3>
+          <p>Серия постеров и элементы дизайн-кода: лекции, памятные даты, события. Узкий плакатный шрифт, красный, золото и русский орнамент как сквозные элементы.</p>
         </div>
-        <p class="feature-desc">Крупнейший самостоятельный UI/UX-проект: проектирование лендинга ювелирного бренда от структуры и пользовательского пути до детального макета — сетка, типографика, карточки товара.</p>
-        <a class="figma-btn" href="https://www.figma.com/design/nfCoufwBgnUXgmWmtqUj4C/%D0%93%D0%A0%D0%90%D0%9D%D0%AC-%E2%80%94-%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F--%D0%B2%D0%B0%D0%B9%D1%80%D1%84%D1%80%D0%B5%D0%B9%D0%BC-?node-id=0-1&t=k9qASkKTR7Cltp6S-1" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z"/><path d="M4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4z"/><path d="M4 4c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4z"/><path d="M12 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V0z"/><path d="M20 12c0 2.208-1.792 4-4 4s-4-1.792-4-4 1.792-4 4-4 4 1.792 4 4z"/></svg>
-          Открыть в Figma
-        </a>
       </div>
+      <div class="posters">
+        <figure><img src="img/a3.jpg" alt="Постер «День Крещения Руси»"><figcaption>День Крещения Руси<small>тематический постер</small></figcaption></figure>
+        <figure><img src="img/a5.jpg" alt="Постер «Буква одна»"><figcaption>Буква одна<small>ключевой постер</small></figcaption></figure>
+        <figure><img src="img/a4.jpg" alt="Постер «С днём рождения, Ермолов»"><figcaption>Ермолов<small>портретный постер</small></figcaption></figure>
+        <figure><img src="img/a1.jpg" alt="Постер к лекции «Исторические основания христианской веры»"><figcaption>Исторические основания<small>анонс лекции</small></figcaption></figure>
+        <figure><img src="img/a2.jpg" alt="Постер «Русский орнамент»"><figcaption>Русский орнамент<small>элемент дизайн-кода</small></figcaption></figure>
+      </div>
+    </article>
 
-      <div class="feature-card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        </div>
+    <article class="case">
+      <span class="num">02</span>
+      <div class="case-head">
+        <span class="idx">02 / 04</span>
         <div>
-          <p class="feature-title">«Симург» — слайды и баннеры</p>
-          <p class="feature-sub">FIGMA · ПРЕЗЕНТАЦИЯ · ТЕСТОВОЕ ЗАДАНИЕ</p>
+          <h3>«Грань» — ювелирный магазин</h3>
+          <p>Главная страница магазина серебряных колец ручной работы: структура и пользовательский путь, слайдшоу, полки хитов, коллекции и карточки товара.</p>
+          <a class="case-link" href="https://www.figma.com/design/nfCoufwBgnUXgmWmtqUj4C/" target="_blank" rel="noopener">Открыть в Figma ↗</a>
         </div>
-        <p class="feature-desc">Тестовое задание для бренда «Симург»: серия презентационных слайдов и рекламных баннеров — единая сетка, иерархия и стиль подачи, адаптированные под разные форматы.</p>
-        <a class="figma-btn" href="https://www.figma.com/design/kMHa48VIejO00ubMsTDZUe/%D0%A1%D0%B8%D0%BC%D1%83%D1%80%D0%B3-%E2%80%94-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5--%D1%81%D0%BB%D0%B0%D0%B9%D0%B4%D1%8B-%D0%B8-%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D1%8B-?t=mYlqRujYl3ePdrX1-0" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z"/><path d="M4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4z"/><path d="M4 4c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4z"/><path d="M12 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V0z"/><path d="M20 12c0 2.208-1.792 4-4 4s-4-1.792-4-4 1.792-4 4-4 4 1.792 4 4z"/></svg>
-          Открыть в Figma
-        </a>
       </div>
+      <div class="screen scroll">
+        <div class="bar"><i></i><i></i><i></i><span class="hint">наведите — прокрутка</span></div>
+        <div class="view"><img src="img/gran.jpg" alt="Главная страница магазина «Грань»" loading="lazy"></div>
+      </div>
+    </article>
 
-      <div class="feature-card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
-        </div>
+    <article class="case split">
+      <span class="num">03</span>
+      <div class="case-head">
+        <span class="idx">03 / 04</span>
         <div>
-          <p class="feature-title">«FARШ» — посадочная страница франшизы</p>
-          <p class="feature-sub">FIGMA · ЛЕНДИНГ · ТЕСТОВОЕ ЗАДАНИЕ</p>
+          <h3>«Симург» — слайды и баннеры</h3>
+          <p>Серия презентационных слайдов и рекламных баннеров для бренда «Симург» — единая сетка, иерархия и стиль подачи под разные форматы.</p>
+          <a class="case-link" href="https://www.figma.com/design/kMHa48VIejO00ubMsTDZUe/" target="_blank" rel="noopener">Открыть в Figma ↗</a>
         </div>
-        <p class="feature-desc">Тестовое задание для франшизы «FARШ»: структура посадочной страницы, подача УТП и формы заявки, адаптивная сетка от первого экрана до контактов.</p>
-        <a class="figma-btn" href="https://www.figma.com/design/HG2fR7oRVpNTccZefeCe8U/-FAR%D0%A8-%E2%80%94-%D1%84%D1%80%D0%B0%D0%BD%D1%88%D0%B8%D0%B7%D0%B0--%D0%BF%D0%BE%D1%81%D0%B0%D0%B4%D0%BE%D1%87%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0--%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-?t=mYlqRujYl3ePdrX1-0" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z"/><path d="M4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4z"/><path d="M4 4c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4z"/><path d="M12 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V0z"/><path d="M20 12c0 2.208-1.792 4-4 4s-4-1.792-4-4 1.792-4 4-4 4 1.792 4 4z"/></svg>
-          Открыть в Figma
-        </a>
       </div>
+      <div class="body">
+        <div class="screen"><img src="img/simurg-slide.jpg" alt="Слайд «Наше мышление создано другими людьми»" loading="lazy"></div>
+        <div class="stack">
+          <div class="screen"><img src="img/simurg-banner1.jpg" alt="Баннер «Связь с собой»" loading="lazy"></div>
+          <div class="screen"><img src="img/simurg-banner2.jpg" alt="Баннер «1+1»" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
 
+    <article class="case pair">
+      <span class="num">04</span>
+      <div class="case-head">
+        <span class="idx">04 / 04</span>
+        <div>
+          <h3>«FARШ» — посадочная франшизы</h3>
+          <p>Первый экран посадочной страницы франшизы «FARШ»: варианты подачи — бренд и интерьер, география сети из 70+ ресторанов.</p>
+          <a class="case-link" href="https://www.figma.com/design/HG2fR7oRVpNTccZefeCe8U/" target="_blank" rel="noopener">Открыть в Figma ↗</a>
+        </div>
+      </div>
+      <div class="body">
+        <div class="screen"><img src="img/farsh-1.jpg" alt="«FARШ»: первый экран с интерьером бургерной" loading="lazy"></div>
+        <div class="screen"><img src="img/farsh-2.jpg" alt="«FARШ»: первый экран с картой сети" loading="lazy"></div>
+      </div>
+    </article>
+  </div>
+</main>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Обо мне</p>
+      <h2 style="margin-top:18px">Студент<br>4 курса<br>и дизайнер</h2>
     </div>
-  </section>
-
-  <section class="graphic">
-    <div class="section-head reveal">
-      <p class="section-kicker">Постеры и айдентика</p>
-      <h2 class="section-title">Графика и айдентика</h2>
-    </div>
-    <div class="gallery">
-
-      <div class="gallery-item reveal" style="--stagger:.03s">
-        <img src="img/a5.jpg" alt="Постер «Буквы много. Но настоящая — одна. Не промахнись.» — Братство Академистов" loading="lazy">
-        <div class="cap">Братство Академистов<br>ключевой постер</div>
-      </div>
-
-      <div class="gallery-item reveal" style="--stagger:.09s">
-        <img src="img/a3.jpg" alt="Постер «День Крещения Руси»" loading="lazy">
-        <div class="cap">День Крещения Руси<br>тематический постер</div>
-      </div>
-
-      <div class="gallery-item reveal" style="--stagger:.15s">
-        <img src="img/a4.jpg" alt="Постер «С днём рождения, Ермолов»" loading="lazy">
-        <div class="cap">С днём рождения, Ермолов<br>портретный постер</div>
-      </div>
-
-      <div class="gallery-item reveal" style="--stagger:.03s">
-        <img src="img/a1.jpg" alt="Постер к лекции «Исторические основания христианской веры»" loading="lazy">
-        <div class="cap">Исторические основания<br>анонс лекции</div>
-      </div>
-
-      <div class="gallery-item reveal" style="--stagger:.09s">
-        <img src="img/a2.jpg" alt="Постер «Русский орнамент»" loading="lazy">
-        <div class="cap">Русский орнамент<br>элемент дизайн-кода</div>
-      </div>
-
-      <div class="gallery-item reveal" style="--stagger:.15s">
-        <img src="img/a6.jpg" alt="Постер «День без фейков»" loading="lazy">
-        <div class="cap">День без фейков<br>событийный постер</div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="skills reveal" id="skills">
-    <div class="section-head">
-      <h2 class="section-title">Навыки</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Инструменты</h3>
-        <ul>
-          <li>Figma — интерфейсы, прототипы, макеты</li>
-          <li>ChatGPT (Codex), Claude Code — ИИ в дизайне и работе над проектами</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Дизайн</h3>
-        <ul>
-          <li>Дизайн-системы и брендбуки</li>
-          <li>Типографика и композиция</li>
-          <li>UI/UX-проектирование</li>
-        </ul>
+    <div>
+      <h4>Опыт</h4>
+      <div class="job">
+        <small>апр 2025 — сент 2026</small>
+        <b>Дизайнер · Царьград</b>
+        <p>Презентации и постеры, участие в формировании единой дизайн-системы — типографика, цвет, композиция — для последовательного оформления материалов.</p>
       </div>
     </div>
-  </section>
-
-  <footer class="reveal" id="contact">
-    <p class="ft-title">Открыт к новым проектам и сотрудничеству — буду рад обсудить задачу.</p>
-    <div class="ft-contacts">
-      <a href="mailto:moreffvladis387@gmail.com">moreffvladis387@gmail.com</a>
-      <span>+7 900 144-08-40</span>
-      <span>Москва</span>
+    <div>
+      <h4>Навыки</h4>
+      <ul>
+        <li><b>Figma</b> — интерфейсы, прототипы, макеты</li>
+        <li><b>Дизайн-системы</b> и брендбуки</li>
+        <li><b>Типографика</b> и композиция</li>
+        <li><b>UI/UX</b>-проектирование</li>
+        <li><b>ИИ в работе</b> — Claude Code, ChatGPT</li>
+      </ul>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <p class="credit">Дизайн и сайт — совместная работа UI/UX-дизайна и Claude Code</p>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Связь</p>
+    <h2 style="margin-top:22px">Обсудим<br><span>задачу?</span></h2>
+    <p>Открыт к новым проектам и сотрудничеству — буду рад обсудить задачу.</p>
+    <a class="mail" href="mailto:moreffvladis387@gmail.com">moreffvladis387@gmail.com</a>
+    <div class="alt"><a href="tel:+79001440840">+7 900 144-08-40</a><span>Москва</span></div>
+  </div>
+</section>
 
-</div>
+<footer>
+  <div class="wrap"><span>© 2026 Морев Владислав</span><span>Дизайн и сайт — вместе с Claude Code</span></div>
+</footer>
 
-<script>
-(function(){
-  var root = document.documentElement;
-  var btn = document.getElementById('themeToggle');
-  var stored = null;
-  try { stored = localStorage.getItem('theme'); } catch(e){}
-  if (stored === 'light' || stored === 'dark') { root.setAttribute('data-theme', stored); }
-
-  btn.addEventListener('click', function(){
-    var current = root.getAttribute('data-theme');
-    var isDarkNow = current === 'dark' || (!current && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    var next = isDarkNow ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch(e){}
-  });
-
-  var els = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
-    els.forEach(function(el){ io.observe(el); });
-  } else {
-    els.forEach(function(el){ el.classList.add('is-visible'); });
-  }
-
-  var bar = document.querySelector('.progress');
-  function updateProgress(){
-    var h = document.documentElement;
-    var max = h.scrollHeight - h.clientHeight;
-    var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
-    bar.style.width = pct + '%';
-  }
-  window.addEventListener('scroll', updateProgress, {passive:true});
-  updateProgress();
-})();
-</script>
-
-</body></html>
+</body>
+</html>
