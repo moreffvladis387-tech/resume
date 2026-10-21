@@ -129,6 +129,8 @@ img{display:block;max-width:100%}
 .contact h2{font:600 clamp(56px,11vw,170px)/.85 var(--display);text-transform:uppercase}
 .contact h2 span{color:var(--gold)}
 .contact p{color:var(--paper-dim);margin:28px auto 40px;max-width:460px}
+.contact .links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px 56px}
+.contact .mail small{display:block;font:400 12px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .contact .mail{display:inline-block;font:500 clamp(22px,3vw,36px)/1 var(--display);letter-spacing:.04em;border-bottom:2px solid var(--red);padding-bottom:8px}
 .contact .mail:hover{color:var(--gold)}
 .contact .alt{display:flex;justify-content:center;gap:28px;margin-top:30px;font:400 14px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--paper-dim)}
@@ -179,7 +181,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <ul>
       <li><a href="#work">Работы</a></li>
       <li><a href="#about">Обо мне</a></li>
-      <li><a href="#contact">Связь</a></li>
+      <li><a href="#contact">Контакты</a></li>
     </ul>
     <span class="status">Открыт для проектов</span>
   </div>
@@ -190,10 +192,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div>
       <p class="eyebrow">Портфолио · Москва · 2026</p>
       <h1>Морев<span>Владислав</span></h1>
-      <p class="lead"><b>Дизайнер — айдентика, постеры, интерфейсы.</b> Собираю визуальный язык проекта с нуля и довожу его до готовых материалов: от фирменного стиля до макета в Figma.</p>
+      <p class="lead"><b>Делаю постеры, презентации и макеты сайтов.</b> Полтора года работаю дизайнером в «Царьграде»: оформляю постеры и презентации, помогаю держать единый стиль всех материалов. Сайты рисую в Figma — от схемы страницы до готового макета.</p>
       <div class="cta-row">
         <a class="btn primary" href="#work">Смотреть работы →</a>
-        <a class="btn" href="#contact">Написать</a>
+        <a class="btn" href="https://t.me/romanoffss" target="_blank" rel="noopener">Написать в Telegram ↗</a>
       </div>
     </div>
     <div class="fan" aria-hidden="true">
@@ -324,7 +326,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <p class="eyebrow">Связь</p>
     <h2 style="margin-top:22px">Обсудим<br><span>задачу?</span></h2>
     <p>Открыт к новым проектам и сотрудничеству — буду рад обсудить задачу.</p>
-    <a class="mail" href="mailto:moreffvladis387@gmail.com">moreffvladis387@gmail.com</a>
+    <div class="links">
+      <a class="mail" href="https://t.me/romanoffss" target="_blank" rel="noopener"><small>Telegram</small>@romanoffss</a>
+      <a class="mail" href="mailto:moreffvladis387@gmail.com"><small>Почта</small>moreffvladis387@gmail.com</a>
+    </div>
     <div class="alt"><a href="tel:+79001440840">+7 900 144-08-40</a><span>Москва</span></div>
   </div>
 </section>
