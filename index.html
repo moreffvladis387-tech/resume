@@ -111,6 +111,13 @@ img{display:block;max-width:100%}
 .screen{position:relative;background:var(--ink-2);border:1px solid var(--line)}
 .screen .bar{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}
 .screen .bar i{width:9px;height:9px;border-radius:50%;background:var(--ink-3)}
+.events{position:relative;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,.7075fr);gap:16px;align-items:start}
+.events figure{position:relative;overflow:hidden;background:var(--ink-2);border:1px solid var(--line)}
+.events img{width:100%;transition:transform .5s}
+.events figure:hover img{transform:scale(1.03)}
+.events figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(17,14,12,.92));font:500 14px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase}
+.events figcaption small{display:block;font:400 12px/1.4 var(--text);letter-spacing:0;text-transform:none;color:var(--paper-dim);margin-top:4px}
+
 .screen img{width:100%}
 .screen.scroll .view{aspect-ratio:16/10;overflow:hidden}
 .screen.scroll img{height:100%;object-fit:cover;object-position:50% 0;transition:object-position 7s ease-in-out}
@@ -162,7 +169,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .case-head .idx{width:80px}
   .posters{grid-template-columns:1fr 1fr}
   .posters figure:first-child{grid-column:span 2;grid-row:auto}
-  .case.split .body,.case.pair .body{grid-template-columns:1fr}
+  .case.split .body,.case.pair .body,.events{grid-template-columns:1fr}
   .screen .hint{display:none}
   .about .wrap{grid-template-columns:1fr;gap:44px}
 }
@@ -217,7 +224,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
   <div class="wrap">
     <div class="stats">
-      <div><b>04</b><span>кейса в портфолио</span></div>
+      <div><b>05</b><span>кейсов в портфолио</span></div>
       <div><b>30+</b><span>постеров и анонсов</span></div>
       <div><b>1,5</b><span>года в «Царьграде»</span></div>
       <div><b>Fig · Ps · Ai</b><span>Figma, Photoshop, Illustrator</span></div>
@@ -237,7 +244,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <article class="case">
       <span class="num">01</span>
       <div class="case-head">
-        <span class="idx">01 / 04</span>
+        <span class="idx">01 / 05</span>
         <div>
           <h3>Царьград — постеры</h3>
           <p>Серия постеров и элементы дизайн-кода: лекции, памятные даты, события. Узкий плакатный шрифт, красный, золото и русский орнамент как сквозные элементы.</p>
@@ -255,7 +262,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <article class="case">
       <span class="num">02</span>
       <div class="case-head">
-        <span class="idx">02 / 04</span>
+        <span class="idx">02 / 05</span>
+        <div>
+          <h3>Афиши и меню для мероприятий</h3>
+          <p>Поздравительный постер, анонс вечеринки и коктейльная карта формата A3 для «Русского посвята».</p>
+        </div>
+      </div>
+      <div class="events">
+        <figure><img src="img/ev-birthday.jpg" alt="Постер «С днём рождения!»" loading="lazy"><figcaption>С днём рождения<small>поздравительный постер</small></figcaption></figure>
+        <figure><img src="img/ev-predzakaz.jpg" alt="Анонс «Предзаказ, 10 октября»" loading="lazy"><figcaption>Предзаказ<small>анонс вечеринки</small></figcaption></figure>
+        <figure><img src="img/ev-bar-menu.jpg" alt="Коктейльная карта «Русский посвят»" loading="lazy"><figcaption>Коктейльная карта<small>меню, A3</small></figcaption></figure>
+      </div>
+    </article>
+
+    <article class="case">
+      <span class="num">03</span>
+      <div class="case-head">
+        <span class="idx">03 / 05</span>
         <div>
           <h3>«Грань» — ювелирный магазин</h3>
           <p>Главная страница магазина серебряных колец ручной работы: структура и пользовательский путь, слайдшоу, полки хитов, коллекции и карточки товара.</p>
@@ -269,9 +292,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </article>
 
     <article class="case split">
-      <span class="num">03</span>
+      <span class="num">04</span>
       <div class="case-head">
-        <span class="idx">03 / 04</span>
+        <span class="idx">04 / 05</span>
         <div>
           <h3>«Симург» — слайды и баннеры</h3>
           <p>Серия презентационных слайдов и рекламных баннеров для бренда «Симург» — единая сетка, иерархия и стиль подачи под разные форматы.</p>
@@ -288,9 +311,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </article>
 
     <article class="case pair">
-      <span class="num">04</span>
+      <span class="num">05</span>
       <div class="case-head">
-        <span class="idx">04 / 04</span>
+        <span class="idx">05 / 05</span>
         <div>
           <h3>«FARШ» — посадочная франшизы</h3>
           <p>Первый экран посадочной страницы франшизы «FARШ»: варианты подачи — бренд и интерьер, география сети из 70+ ресторанов.</p>
