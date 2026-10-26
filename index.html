@@ -118,6 +118,12 @@ img{display:block;max-width:100%}
 .events figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(17,14,12,.92));font:500 14px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase}
 .events figcaption small{display:block;font:400 12px/1.4 var(--text);letter-spacing:0;text-transform:none;color:var(--paper-dim);margin-top:4px}
 
+.deck{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.deck figure{border:1px solid var(--line);background:var(--ink-2);overflow:hidden}
+.deck img{width:100%;transition:transform .5s}
+.deck figure:hover img{transform:scale(1.03)}
+.deck .deck-main{grid-column:span 5}
+
 .screen img{width:100%}
 .screen.scroll .view{aspect-ratio:16/10;overflow:hidden}
 .screen.scroll img{height:100%;object-fit:cover;object-position:50% 0;transition:object-position 7s ease-in-out}
@@ -170,6 +176,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .posters{grid-template-columns:1fr 1fr}
   .posters figure:first-child{grid-column:span 2;grid-row:auto}
   .case.split .body,.case.pair .body,.events{grid-template-columns:1fr}
+  .deck{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .deck .deck-main{grid-column:span 2}
   .screen .hint{display:none}
   .about .wrap{grid-template-columns:1fr;gap:44px}
 }
@@ -224,7 +232,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
   <div class="wrap">
     <div class="stats">
-      <div><b>05</b><span>кейсов в портфолио</span></div>
+      <div><b>06</b><span>кейсов в портфолио</span></div>
       <div><b>30+</b><span>постеров и анонсов</span></div>
       <div><b>1,5</b><span>года в «Царьграде»</span></div>
       <div><b>Fig · Ps · Ai</b><span>Figma, Photoshop, Illustrator</span></div>
@@ -244,7 +252,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <article class="case">
       <span class="num">01</span>
       <div class="case-head">
-        <span class="idx">01 / 05</span>
+        <span class="idx">01 / 06</span>
         <div>
           <h3>Царьград — постеры</h3>
           <p>Серия постеров и элементы дизайн-кода: лекции, памятные даты, события. Узкий плакатный шрифт, красный, золото и русский орнамент как сквозные элементы.</p>
@@ -262,7 +270,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <article class="case">
       <span class="num">02</span>
       <div class="case-head">
-        <span class="idx">02 / 05</span>
+        <span class="idx">02 / 06</span>
+        <div>
+          <h3>Презентация к юбилейному вечеру</h3>
+          <p>Презентация культурной программы ко дню рождения студенческого сообщества: 44 слайда 1920×1080. Исторические фотографии в золотых рамках, таймлайны, цитаты и разделители блоков — в едином фирменном стиле, от структуры до готового файла.</p>
+        </div>
+      </div>
+      <div class="deck">
+        <figure class="deck-main"><img src="img/pres-04.jpg" alt="Слайд «Первокурсник»" loading="lazy"></figure>
+        <figure><img src="img/pres-03.jpg" alt="Разделитель блока" loading="lazy"></figure>
+        <figure><img src="img/pres-05.jpg" alt="Слайд с фотографиями в рамках" loading="lazy"></figure>
+        <figure><img src="img/pres-06.jpg" alt="Слайд-таймлайн 1861–1884" loading="lazy"></figure>
+        <figure><img src="img/pres-13.jpg" alt="Слайд-цитата" loading="lazy"></figure>
+        <figure><img src="img/pres-40.jpg" alt="Слайд с тремя фото" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <article class="case">
+      <span class="num">03</span>
+      <div class="case-head">
+        <span class="idx">03 / 06</span>
         <div>
           <h3>Афиши и меню для мероприятий</h3>
           <p>Поздравительный постер, анонс вечеринки и коктейльная карта формата A3 для «Русского посвята».</p>
@@ -276,9 +303,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </article>
 
     <article class="case">
-      <span class="num">03</span>
+      <span class="num">04</span>
       <div class="case-head">
-        <span class="idx">03 / 05</span>
+        <span class="idx">04 / 06</span>
         <div>
           <h3>«Грань» — ювелирный магазин</h3>
           <p>Главная страница магазина серебряных колец ручной работы: структура и пользовательский путь, слайдшоу, полки хитов, коллекции и карточки товара.</p>
@@ -292,9 +319,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </article>
 
     <article class="case split">
-      <span class="num">04</span>
+      <span class="num">05</span>
       <div class="case-head">
-        <span class="idx">04 / 05</span>
+        <span class="idx">05 / 06</span>
         <div>
           <h3>«Симург» — слайды и баннеры</h3>
           <p>Серия презентационных слайдов и рекламных баннеров для бренда «Симург» — единая сетка, иерархия и стиль подачи под разные форматы.</p>
@@ -311,9 +338,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </article>
 
     <article class="case pair">
-      <span class="num">05</span>
+      <span class="num">06</span>
       <div class="case-head">
-        <span class="idx">05 / 05</span>
+        <span class="idx">06 / 06</span>
         <div>
           <h3>«FARШ» — посадочная франшизы</h3>
           <p>Первый экран посадочной страницы франшизы «FARШ»: варианты подачи — бренд и интерьер, география сети из 70+ ресторанов.</p>
